@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MP3 Playlist Player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1> "place-holder" </h1>
+
+  <div class ="rectangle">
+    <p id="song-title">No song playing</p>
+  </div>
+  
+  <button id="play-pause" class="play-pause-btn">
+    <div class="icon-wrapper">
+      <img id="play-icon" src="images/Play.png" alt="Play" />
+      <img id="pause-icon" src="images/Pause.png" alt="Pause" style="display: none;" />
+    </div>
+  </button>
+
+  <button id="next-song" class="next-song-btn"> 
+    <img src="images/Next.png" alt="Next" />
+  </button>
+
+  <button id="back-song" class="back-song-btn">
+    <img src="images/Back.png" alt="Back" />
+  </button>
+
+  <audio id="audio-player" controls></audio>
+
+  <input type="range" id="progress-bar" value="0" step="1" />
+  <div id="time-display">0:00 / 0:00</div>
+
+
+  <h2>Playlist</h2>
+    <button id="toggle-playlist">Toggle Playlist</button>
+    <ul id="playlist" class = "hidden"></ul>
+    
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>💖 Hello World!</h1>
+    <p>Welcome to your Electron application.</p>
+  </body>
+</html> -->

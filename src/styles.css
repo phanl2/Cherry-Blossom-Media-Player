@@ -1,0 +1,160 @@
+/* body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: auto;
+  max-width: 38rem;
+  padding: 2rem;
+} */
+/* styles.css */
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  position: absolute;
+  height: 100vh;
+  width: 425px;
+  height: 484px;
+  background: rgba(10, 61, 7, 0.9);
+  
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+  margin: 0.5rem 0;
+}
+
+/* Keep Playlist Hidden */
+.hidden {
+  display: none;
+}
+
+/* Holds Song Titles & Artists */
+.rectangle {
+  position: absolute;
+  width: 80%;
+  height: 9%;
+  background: #65AE6C;
+  border-radius: 20px;
+  
+  top: 9%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  z-index: 1;
+}
+
+.play-pause-btn {
+  position: relative;
+  width: 66px;
+  height: 65px;
+  top: 83%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.icon-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.next-song-btn {
+  position: relative;
+  width: 56px;
+  height: 38px;
+  top: 72%;
+  left: 40%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.next-song-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.back-song-btn {
+  position: relative;
+  width: 56px;
+  height: 38px;
+  top: 64%;
+  left: -40%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.back-song-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+@font-face {
+  font-family: Trispace;
+  src: url(font/Trispace-Thin.ttf);
+}
+
+/* Song title */
+#song-title {
+  font-family: Trispace;
+  color: white;
+  font-size: 18px;
+  z-index: 2;
+}
+
+#progress-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: linear-gradient(to right, pink 0%, white 0%);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: pink;
+  cursor: pointer;
+  margin-top: -2px;
+  border: none;
+}
+
+
+
+
