@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-
   // Populate static playlist
   songs.forEach((song, index) => {
     const li = document.createElement("li");

@@ -152,39 +152,11 @@ li {
   src: url(font/Trispace-Thin.ttf);
 }
 
-/* Song title */
 #song-title {
   font-family: Trispace;
   color: white;
   font-size: 18px;
   z-index: 2;
-}
-
-/* Playlist toggle button specific styles */
-#toggle-playlist {
-  font-family: Trispace;
-  color: white;
-  font-size: 16px;
-  padding: 8px 15px;
-  background: #65AE6C;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  position: absolute;
-  top: 98%;
-}
-
-/* Hover effect for Playlist button*/
-#toggle-playlist:hover {
-  background: #65AE6C;
-  transform: scale(1.05);
-}
-
-/* Active effect for Playlist button */
-#toggle-playlist:active {
-  background: #65AE6C;
-  transform: scale(0.98);
 }
 
 #progress-bar {
@@ -197,7 +169,7 @@ li {
   appearance: none;
   cursor: pointer;
   position: absolute;
-  top: 82%;
+  top: 81.5%;
 }
 
 #progress-bar::-webkit-slider-thumb {
@@ -228,4 +200,31 @@ li {
   position: absolute;
   top: 81.7%;
   left: 77%;
+}
+
+/* Playlist toggle button specific styles */
+#toggle-playlist {
+  font-family: Trispace;
+  color: white;
+  font-size: 16px;
+  padding: 8px 15px;
+  background: #65AE6C;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  position: absolute;
+  top: 98%;
+}
+
+/* Hover effect for Playlist button*/
+#toggle-playlist:hover {
+  background: #65AE6C;
+  transform: scale(1.05);
+}
+
+/* Active effect for Playlist button */
+#toggle-playlist:active {
+  background: #65AE6C;
+  transform: scale(0.98);
 }
