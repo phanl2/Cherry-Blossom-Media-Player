@@ -13,6 +13,8 @@ let timeDisplay;
 let togglePlaylist;
 let playIcon;
 let pauseIcon;
+let nextSong;
+let backSong;
 
 
 
@@ -20,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
   audioPlayer = document.getElementById("audio-player");
   playPauseButton = document.getElementById("play-pause");
   nextSong = document.getElementById("next-song");
-  previousSong = document.getElementById("back-song")
+  backSong = document.getElementById("back-song")
   songTitle = document.getElementById("song-title");
   playlist = document.getElementById("playlist");
   progressBar = document.getElementById("progress-bar");
@@ -103,8 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Space bar play/pause
   document.addEventListener('keydown', (event) => {
-    if (event.code === 'Space') {  // Check if Spacebar is pressed
-      event.preventDefault();  // Prevent default action (e.g., page scroll)
+    if (event.code === 'Space') {
+      event.preventDefault();
       if (audioPlayer.paused) {
         audioPlayer.play();
       } else {
@@ -130,13 +132,14 @@ document.addEventListener("DOMContentLoaded", function () {
   //play(currentSongIndex);
 
   // Skips the current song and goes to the next
-  nextSong.addEventListener("click", () =>{
-    play(currentSongIndex + 1);
-    currentSongIndex += 1
+  nextSong.addEventListener("click", () => {
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    play(currentSongIndex);
+
   });
 
   // Returns to the previous song
-  previousSong.addEventListener("click", () => {
+  backSong.addEventListener("click", () => {
     play(currentSongIndex - 1);
     currentSongIndex -= 1
   });
@@ -145,8 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function play(index) {
   if (index >= 0 && index < songs.length) {
-    currentSongIndex = index;
-    const song = songs[index];
+    song = songs[index];
     audioPlayer.src = song.file;
     audioPlayer.play();
     songTitle.textContent = song.title;
