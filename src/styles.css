@@ -1,12 +1,4 @@
-/* body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif;
-  margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
-} */
 /* styles.css */
-
 body {
   font-family: sans-serif;
   display: flex;
@@ -37,7 +29,7 @@ li {
 }
 
 /* Holds Song Titles & Artists */
-.rectangle {
+.title-rectangle {
   position: absolute;
   width: 80%;
   height: 9%;
@@ -59,12 +51,24 @@ li {
   position: relative;
   width: 66px;
   height: 65px;
-  top: 83%;
+  top: 74%;
   padding: 0;
   border: none;
   background: none;
   cursor: pointer;
   z-index: 2;
+}
+
+/* Hover effect for Play/Pause button */
+.play-pause-btn:hover {
+  background: transparent;
+  transform: scale(1.05);
+}
+
+/* Active effect for Play/Pause button */
+.play-pause-btn:active {
+  background: transparent;
+  transform: scale(0.98);
 }
 
 .icon-wrapper {
@@ -85,8 +89,8 @@ li {
   position: relative;
   width: 56px;
   height: 38px;
-  top: 72%;
-  left: 40%;
+  top: 63%;
+  left: 20%;
   padding: 0;
   border: none;
   background: none;
@@ -99,22 +103,47 @@ li {
   object-fit: contain;
 }
 
+/* Hover effect for Next button */
+.next-song-btn:hover {
+  background: transparent;
+  transform: scale(1.05);
+}
+
+/* Active effect for Next button */
+.next-song-btn:active {
+  background: transparent;
+  transform: scale(0.98);
+}
+
 .back-song-btn {
   position: relative;
   width: 56px;
   height: 38px;
-  top: 64%;
-  left: -40%;
+  top: 55%;
+  left: -20%;
   padding: 0;
   border: none;
   background: none;
   cursor: pointer;
+  
 }
 
 .back-song-btn img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+/* Hover effect for Back button */
+.back-song-btn:hover {
+  background: transparent;
+  transform: scale(1.05);
+}
+
+/* Active effect for Back button */
+.back-song-btn:active {
+  background: transparent;
+  transform: scale(0.98);
 }
 
 
@@ -131,8 +160,35 @@ li {
   z-index: 2;
 }
 
+/* Playlist toggle button specific styles */
+#toggle-playlist {
+  font-family: Trispace;
+  color: white;
+  font-size: 16px;
+  padding: 8px 15px;
+  background: #65AE6C;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  position: absolute;
+  top: 98%;
+}
+
+/* Hover effect for Playlist button*/
+#toggle-playlist:hover {
+  background: #65AE6C;
+  transform: scale(1.05);
+}
+
+/* Active effect for Playlist button */
+#toggle-playlist:active {
+  background: #65AE6C;
+  transform: scale(0.98);
+}
+
 #progress-bar {
-  width: 100%;
+  width: 50%;
   height: 10px;
   border-radius: 5px;
   background: linear-gradient(to right, pink 0%, white 0%);
@@ -140,21 +196,36 @@ li {
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
-  margin-top: 1rem;
+  position: absolute;
+  top: 82%;
 }
 
 #progress-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background: pink;
   cursor: pointer;
-  margin-top: -2px;
+  margin-top: -1px;
   border: none;
 }
 
+#time-start {
+  font-family: Trispace;
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 81.7%;
+  left: 16%;
+}
 
-
-
+#time-end {
+  font-family: Trispace;
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 81.7%;
+  left: 77%;
+}

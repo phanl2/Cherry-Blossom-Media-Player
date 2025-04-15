@@ -1,6 +1,7 @@
 const songs = [
   { title: "Tate McRae - bloodonmyhands", file: "songs/Tate McRae - bloodonmyhands.mp3" },
-  { title: "Girls' Generation  - Gee", file: "songs/Girls' Generation - Gee.mp3" }
+  { title: "Girls' Generation  - Gee", file: "songs/Girls' Generation - Gee.mp3" },
+  { title: "Donna Missal - God Complex", file: "songs/Donna Missal - God Complex.mp3" }
 ];
 
 let currentSongIndex = 0;
@@ -9,14 +10,13 @@ let playPauseButton;
 let songTitle;
 let playlist;
 let progressBar;
-let timeDisplay;
+let timeStart;
+let timeEnd;
 let togglePlaylist;
 let playIcon;
 let pauseIcon;
 let nextSong;
 let backSong;
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   audioPlayer = document.getElementById("audio-player");
@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
   songTitle = document.getElementById("song-title");
   playlist = document.getElementById("playlist");
   progressBar = document.getElementById("progress-bar");
-  timeDisplay = document.getElementById("time-display");
+  timeStart = document.getElementById("time-start");
+  timeEnd = document.getElementById("time-end");
   togglePlaylist = document.getElementById("toggle-playlist");
   playIcon = document.getElementById("play-icon");
   pauseIcon = document.getElementById("pause-icon");
@@ -47,7 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const totalMinutes = Math.floor(audioPlayer.duration / 60);
       const totalSeconds = Math.floor(audioPlayer.duration % 60).toString().padStart(2, '0');
 
-      timeDisplay.textContent = `${currentMinutes}:${currentSeconds} / ${totalMinutes}:${totalSeconds}`;
+      timeStart.textContent = `${currentMinutes}:${currentSeconds}`;
+      timeEnd.textContent = `${totalMinutes}:${totalSeconds}`;
     }
   });
 
@@ -135,13 +137,14 @@ document.addEventListener("DOMContentLoaded", function () {
   nextSong.addEventListener("click", () => {
     currentSongIndex = (currentSongIndex + 1) % songs.length;
     play(currentSongIndex);
-
+    pauseIcon.style.display = "inline";
   });
 
   // Returns to the previous song
   backSong.addEventListener("click", () => {
     play(currentSongIndex - 1);
     currentSongIndex -= 1
+    pauseIcon.style.display = "inline";
   });
 
 });

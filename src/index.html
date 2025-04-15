@@ -8,7 +8,7 @@
 <body>
   <h1> "place-holder" </h1>
 
-  <div class ="rectangle">
+  <div class ="title-rectangle">
     <p id="song-title">No song playing</p>
   </div>
   
@@ -27,15 +27,15 @@
     <img src="images/Back.png" alt="Back" />
   </button>
 
-  <audio id="audio-player" controls></audio>
+  <audio id="audio-player"> </audio>
 
   <input type="range" id="progress-bar" value="0" step="1" />
-  <div id="time-display">0:00 / 0:00</div>
+  <div id="time-start">0:00</div>
+  <div id="time-end">0:00</div>
 
 
-  <h2>Playlist</h2>
-    <button id="toggle-playlist">Toggle Playlist</button>
-    <ul id="playlist" class = "hidden"></ul>
+  <button id="toggle-playlist">Playlist</button>
+  <ul id="playlist" class = "hidden"></ul>
     
     <script src="index.js"></script>
 </body>
