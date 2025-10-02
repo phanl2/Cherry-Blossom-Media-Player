@@ -4,7 +4,7 @@ const path = require("path");
 function createWindow() {
   const win = new BrowserWindow({
     width: 500,
-    height: 600,
+    height: 590,
     transparent: true,                   // makes window transparent, also doesn't allow manual resize of window
     frame: false,                        // removes window borders/buttons
     backgroundColor: '#00000080',

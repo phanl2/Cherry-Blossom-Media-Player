@@ -7,8 +7,9 @@ body {
   padding: 2rem;
   position: absolute;
   height: 100vh;
-  width: 425px;
-  height: 484px;
+  width: 420px;
+  height: 480px;
+  left: center;
   background: rgba(10, 61, 7, 0.9);
   
 }
@@ -49,7 +50,7 @@ li {
 
 .play-pause-btn {
   position: relative;
-  width: 66px;
+  width: 65px;
   height: 65px;
   top: 74%;
   padding: 0;
@@ -189,7 +190,7 @@ li {
   font-size: 14px;
   color: white;
   position: absolute;
-  top: 81.7%;
+  top: 81.5%;
   left: 16%;
 }
 
@@ -198,7 +199,7 @@ li {
   font-size: 14px;
   color: white;
   position: absolute;
-  top: 81.7%;
+  top: 81.3%;
   left: 77%;
 }
 

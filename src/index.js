@@ -1,7 +1,8 @@
 const songs = [
   { title: "Tate McRae - bloodonmyhands", file: "songs/Tate McRae - bloodonmyhands.mp3" },
   { title: "Girls' Generation  - Gee", file: "songs/Girls' Generation - Gee.mp3" },
-  { title: "Donna Missal - God Complex", file: "songs/Donna Missal - God Complex.mp3" }
+  { title: "Donna Missal - God Complex", file: "songs/Donna Missal - God Complex.mp3" },
+  { title: "Tate McRae - Like I do", file: "songs/Tate McRae - Like I do.mp3" },
 ];
 
 let currentSongIndex = 0;
